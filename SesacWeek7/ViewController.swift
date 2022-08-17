@@ -22,10 +22,9 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let vc = CodeViewController()
+        let vc = KakaoTalkViewController()
         vc.modalPresentationStyle = .overFullScreen
         present(vc, animated: true)
-        
         
 //        showMyAlert(title: "테스트 alert", message: "테스트 메세지", buttonTitle: "변경") { _ in
 //            self.view.backgroundColor = .systemTeal
@@ -38,7 +37,7 @@ class ViewController: UIViewController {
 //        sesacShowActivityViewController(shareImage: image, shareURL: shareURL, shareText: text)
 //
         
-        OpenWebView.presentWebViewController(self, url: "https://www.naver.com", transitionStyle: .present)
+        //OpenWebView.presentWebViewController(self, url: "https://www.naver.com", transitionStyle: .present)
         
         
     }
