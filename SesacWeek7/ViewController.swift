@@ -22,10 +22,10 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let vc = FoodViewController()
-        let nav = UINavigationController(rootViewController: vc)
-        nav.modalPresentationStyle = .overFullScreen
-        present(nav, animated: true)
+        let vc = MusicViewController()
+        //let nav = UINavigationController(rootViewController: vc)
+        vc.modalPresentationStyle = .overFullScreen
+        present(vc, animated: true)
         
 //        showMyAlert(title: "테스트 alert", message: "테스트 메세지", buttonTitle: "변경") { _ in
 //            self.view.backgroundColor = .systemTeal

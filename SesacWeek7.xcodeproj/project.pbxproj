@@ -20,6 +20,7 @@
 		9706D56C28AB40BF00B9C5AA /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9706D56B28AB40BF00B9C5AA /* SecondViewController.swift */; };
 		9706D56E28AB40C800B9C5AA /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9706D56D28AB40C800B9C5AA /* ThirdViewController.swift */; };
 		9706D57228AB412B00B9C5AA /* WalkThroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9706D57128AB412B00B9C5AA /* WalkThroughViewController.swift */; };
+		973EF69228AD8C3B004513E0 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973EF69128AD8C3B004513E0 /* MusicViewController.swift */; };
 		9745492628AC71AD00DAB903 /* CodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9745492528AC71AD00DAB903 /* CodeViewController.swift */; };
 		9745492928AC81B600DAB903 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9745492828AC81B600DAB903 /* SnapKit */; };
 		9745492B28AC822F00DAB903 /* CodeSnapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9745492A28AC822F00DAB903 /* CodeSnapKitViewController.swift */; };
@@ -74,6 +75,7 @@
 		9706D56B28AB40BF00B9C5AA /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		9706D56D28AB40C800B9C5AA /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		9706D57128AB412B00B9C5AA /* WalkThroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughViewController.swift; sourceTree = "<group>"; };
+		973EF69128AD8C3B004513E0 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		9745492528AC71AD00DAB903 /* CodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewController.swift; sourceTree = "<group>"; };
 		9745492A28AC822F00DAB903 /* CodeSnapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSnapKitViewController.swift; sourceTree = "<group>"; };
 		9745492C28AC8C1100DAB903 /* CodeSnap2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSnap2ViewController.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 			children = (
 				9745492F28ACD7CB00DAB903 /* KakaoTalkViewController.swift */,
 				9745493128AD0F2600DAB903 /* FoodViewController.swift */,
+				973EF69128AD8C3B004513E0 /* MusicViewController.swift */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				9706D56E28AB40C800B9C5AA /* ThirdViewController.swift in Sources */,
 				9745492628AC71AD00DAB903 /* CodeViewController.swift in Sources */,
 				9706D57228AB412B00B9C5AA /* WalkThroughViewController.swift in Sources */,
+				973EF69228AD8C3B004513E0 /* MusicViewController.swift in Sources */,
 				9745493028ACD7CB00DAB903 /* KakaoTalkViewController.swift in Sources */,
 				9745493228AD0F2600DAB903 /* FoodViewController.swift in Sources */,
 				9706D56828AB3A9000B9C5AA /* FirstViewController.swift in Sources */,
