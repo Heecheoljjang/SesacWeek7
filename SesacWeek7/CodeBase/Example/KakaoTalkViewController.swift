@@ -65,7 +65,7 @@ class KakaoTalkViewController: UIViewController {
     let profileImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "윤희똥")
-        imageView.layer.cornerRadius = 30
+        imageView.layer.cornerRadius = 36
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleToFill
         
