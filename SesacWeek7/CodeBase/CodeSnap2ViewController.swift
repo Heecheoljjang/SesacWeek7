@@ -47,6 +47,7 @@ class CodeSnap2ViewController: UIViewController {
         
         blackView.snp.makeConstraints { make in
             //make.edges.equalTo(redView).offset(50)
+            
             make.edges.equalTo(redView).inset(50) // 레드뷰 안에 블랙뷰 있는게아님. 서브뷰로 넣어야 안에 있게 되는거
             
             //RTL 아랍처럼 오른쪽부터 글씨 쓰는나라가있음.
