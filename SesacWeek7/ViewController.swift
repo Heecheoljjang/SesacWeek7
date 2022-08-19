@@ -7,41 +7,65 @@
 
 import UIKit
 import SesacUIFramework
+import SnapKit
 
 class ViewController: UIViewController {
     
-    var name = "123"
+    let transitionButton: UIButton = {
+        let button = UIButton()
+        var configuration = UIButton.Configuration.filled()
+        configuration.title = "하이"
+        configuration.baseForegroundColor = .black
+        configuration.baseBackgroundColor = .systemPink
+        button.configuration = configuration
     
-    private var age = 234
+        return button
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configure()
+        
+        transitionButton.addTarget(self, action: #selector(transitionButtonTapped), for: .touchUpInside)
+        
+        //self는 나의 클래스 인스턴스에서 받을거라는거의미
+        NotificationCenter.default.addObserver(self, selector: #selector(saveButtonNotificationObserver(notification:)), name: NSNotification.Name("saveButtonNotification"), object: nil)
+        
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    @objc func saveButtonNotificationObserver(notification: NSNotification) {
         
-        let vc = MusicViewController()
-        //let nav = UINavigationController(rootViewController: vc)
-        vc.modalPresentationStyle = .overFullScreen
-        present(vc, animated: true)
-        
-//        showMyAlert(title: "테스트 alert", message: "테스트 메세지", buttonTitle: "변경") { _ in
-//            self.view.backgroundColor = .systemTeal
-//        }
-        testOpen()
-        
-//        let image = UIImage(systemName: "star.fill")!
-//        let shareURL = "https://www.apple.com"
-//        let text = "WWDC Whats's New"
-//        sesacShowActivityViewController(shareImage: image, shareURL: shareURL, shareText: text)
-//
-        
-        //OpenWebView.presentWebViewController(self, url: "https://www.naver.com", transitionStyle: .present)
-        
-        
+        //any이기떄문에 타입캐스팅
+        if let name = notification.userInfo?["name"] as? String {
+            print(name)
+            self.transitionButton.configuration?.title = name
+        } else {
+            
+        }
     }
-
+    
+    @objc func transitionButtonTapped() {
+        
+        NotificationCenter.default.post(name: NSNotification.Name("test"), object: nil, userInfo: ["name": "\(Int.random(in: 1...100))", "value": 12345])
+        
+        let vc = ProfileViewController()
+        
+        vc.saveButtonActionHandler = { name in
+            self.transitionButton.configuration?.title = name
+        
+        }
+        
+        present(vc, animated: true)
+    }
+    
+    func configure() {
+        view.addSubview(transitionButton)
+        
+        transitionButton.snp.makeConstraints { make in
+            make.width.height.equalTo(200)
+            make.center.equalTo(view)
+        }
+    }
 }
 
